@@ -1,12 +1,18 @@
-listen: :443
+listen: :6443
 
 tls:
-  cert: /root/fullchain.cer
-  key: /root/private.key
+  cert: /root/cert/cert.pem
+  key: /root/cert/private.key
 
+quic:
+  initStreamReceiveWindow: 16777216
+  maxStreamReceiveWindow: 16777216
+  initConnReceiveWindow: 33554432
+  maxConnReceiveWindow: 33554432
+  
 auth:
   type: password
-  password: good
+  password: mwnv
 
 resolver:
   type: https
@@ -14,6 +20,8 @@ resolver:
     addr: 1.1.1.1:443
     timeout: 10s
 
-acl:
-  inline: 
-    - reject(all, udp/443)
+masquerade: 
+  type: proxy
+  proxy:
+    url: https://bing.com/ 
+    rewriteHost: true
