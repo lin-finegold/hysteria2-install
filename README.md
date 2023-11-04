@@ -13,13 +13,13 @@ curl -Lo hysteria https://github.com/apernet/hysteria/releases/latest/download/h
 2. 下载配置
 
 ```
-curl -Lo /root/hysteria_config.yaml https://github.com/lin-finegold/hysteria2-install/blob/main/config_server.yaml
+curl -Lo /root/hysteria_config.yaml https://raw.githubusercontent.com/lin-finegold/hysteria2-install/main/config_server.yaml
 ```
 
 3. 下载systemctl配置
 
 ```
-curl -Lo /etc/systemd/system/hysteria.service https://raw.githubusercontent.com/chika0801/hysteria-install/main/hysteria.service && systemctl daemon-reload
+curl -Lo /etc/systemd/system/hysteria.service https://raw.githubusercontent.com/lin-finegold/hysteria-install/main/hysteria.service && systemctl daemon-reload
 ```
 
 4. 上传证书和私钥
