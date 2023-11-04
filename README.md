@@ -13,7 +13,7 @@ curl -Lo hysteria https://github.com/apernet/hysteria/releases/latest/download/h
 2. 下载配置
 
 ```
-curl -Lo /root/hysteria_config.yaml https://raw.githubusercontent.com/chika0801/hysteria-install/main/config_server.yaml
+curl -Lo /root/hysteria_config.yaml https://github.com/lin-finegold/hysteria2-install/blob/main/config_server.yaml
 ```
 
 3. 下载systemctl配置
